@@ -74,21 +74,53 @@
 }
 
 .avatar_displayProfile{
-  background-color: rgb(0, 255, 55);
+  /* background-color: rgb(0, 183, 255); */
   height: 257px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(119, 97, 97, 0.308);
  
 
 }
 
+.profile_name{
+  padding: 20px;
+}
 
-.avatar_logo{
-
-  color: blue;
+.profile_name p{
+  margin-bottom: 10px;
+  color: rgb(10, 121, 82);
 
 }
+.profile_name h4{
+  /* border-bottom: 1px solid black; */
+  box-shadow: 0px 2px  4px  rgb(211, 184, 184);
+  padding:10px;
+}
+
+.profile_note{
+  padding: 20px;
+}
+.profile_note p {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.about_profile{
+  padding: 20px;
+
+}
+.about_profile h4{
+  box-shadow: 0px 2px  4px  rgb(211, 184, 184);
+  padding:10px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+ 
+}
+
+
+
 
 
 /*    search bar css start */

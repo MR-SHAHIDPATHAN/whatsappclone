@@ -8,12 +8,16 @@ import '../../css/Header.css';
 import { GoogleLogout} from "react-google-login";
 import { ClientId } from '../../constant/data';
 import { AccountContext } from '../../context/AccountProvider';
+// import { Drawer } from '@material-ui/core';
+import Drawer from "./InfoDrawer";
+
 
 
 
 const HeaderMenu = () => {
   const [open , setOpen] = useState(false);
   const {setAccount} = useContext(AccountContext)
+  const [opendrawer , setOpenDrawer]= useState();
 
 
   const handleClose = ()=>{
@@ -33,6 +37,13 @@ const HeaderMenu = () => {
     alert("Logout SuccessFully")
     setAccount('')
 
+    
+  
+  }
+
+  const OpenProfile = () =>{
+    setOpenDrawer(true);
+  
     
   
   }
@@ -59,7 +70,7 @@ const HeaderMenu = () => {
 
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={()=>{handleClose();OpenProfile()}}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>
           <GoogleLogout
           clientId={ClientId}
@@ -70,10 +81,11 @@ const HeaderMenu = () => {
                
           />
         </MenuItem>
-        
       </Menu>
+        <Drawer open={opendrawer} setOpen={setOpenDrawer}/>
+     
     </>
-  )
+  );
 }
 
-export default HeaderMenu
+export default HeaderMenu;
