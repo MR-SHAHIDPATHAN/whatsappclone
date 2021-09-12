@@ -1,0 +1,19 @@
+.main_section{
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  display: flex;
+}
+
+
+.main_left{
+  /* background-color: blue; */
+  flex: 0.3;
+ border-right: 1px solid rgb(177, 152, 152);
+  
+}
+
+.main_right{
+  /* background-color: black; */
+  flex: 0.7;
+}
